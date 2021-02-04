@@ -12,6 +12,7 @@ public class KafkaProducerService {
 	
 	private final String TOPIC_NAME = "apptopic";
 	
+	
 	public String postMessage(String message) {
 		kafkaTemplate.send(TOPIC_NAME, message);
 		return "Message sent successfully to "+ TOPIC_NAME + " topic";
